@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="ru"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Карта мест Владимирского края, связанных с А. В. Суворовым: Владимир, Кистыш, Лакинск и Менчаково. История, адреса и источники.">
+  <title>Суворов и Владимирский край — карта памятных мест</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/geography.js" defer=""></script>
+  <script src="js/places.js" defer=""></script>
+  <script src="js/app.js" defer=""></script>
+</head>
+<body>
+  <a class="skip-link" href="#place-panel">Перейти к описаниям мест</a>
+  <header class="site-header page-shell">
+    <div>
+      <h1><a class="wordmark" href="#">Суворов и Владимирский край</a></h1>
+      <p class="site-subtitle">Карта памятных мест</p>
+    </div>
+    <nav class="header-nav" aria-label="О карте">
+      <a href="#about">Как пользоваться</a>
+      <a href="#all-sources">Источники</a>
+    </nav>
+  </header>
+  <main class="page-shell">
+    <aside class="offline-tools" aria-label="Карта без интернета"><p><span class="offline-label">Можно пользоваться без интернета</span>Один раз скачайте файл и открывайте его в браузере на компьютере. Карта и описания будут доступны без сети.</p><a class="offline-download" href="suvorov-offline.txt" download="Карта_Суворов_без_интернета.html">Скачать карту без интернета</a></aside>
+    <p class="page-intro">Выберите населённый пункт на карте или в списке. Откроются места, связанные с Александром Васильевичем Суворовым.</p>
+    <nav class="city-picker" id="city-picker" aria-label="Выбрать населённый пункт"></nav>
+    <section class="explorer" aria-label="Карта и сведения о местах">
+      <div class="map-column">
+        <div class="map-frame">
+          <div class="map-topline"><span>Владимирская область</span><span class="map-hint">Нажмите на название места</span></div>
+          <div id="map" class="map" aria-label="Карта населённых пунктов">
+            <svg id="geography" role="img" aria-labelledby="map-title map-description"><title id="map-title">Суворовские места Владимирского края</title><desc id="map-description">Владимир, Кистыш, Лакинск — исторический Ундол, Менчаково. Каждый населённый пункт можно выбрать отдельной кнопкой.</desc></svg>
+            <div id="map-places" class="map-places"></div>
+            <div class="map-compass" aria-hidden="true"><span>С</span><svg viewBox="0 0 16 24"><path d="m8 1 6 20-6-5-6 5Z"></path></svg></div>
+          </div>
+          <div class="map-bottomline"><div class="map-key"><span><i class="road-key"></i>Дороги</span><span><i class="river-key"></i>Реки</span></div><span class="map-scale" id="map-scale"></span></div>
+        </div>
+        <p class="map-caption">На карте отмечены населённые пункты. Точные адреса и сведения о посещении указаны в описаниях объектов.</p>
+        <a class="mobile-panel-link" href="#place-panel">К описаниям мест ↓</a>
+      </div>
+      <section class="place-panel" id="place-panel" aria-label="Выбранное место и его объекты" tabindex="-1"></section>
+    </section>
+    <details class="help-section" id="about">
+      <summary>Как пользоваться картой</summary>
+      <div class="help-body">
+        <ol><li>Нажмите на название населённого пункта.</li><li>Выберите интересующий объект в списке.</li><li>Прочитайте его историю, адрес и условия посещения. По ссылкам можно перейти к документам и официальным сайтам.</li></ol>
+        <p>Места можно выбирать в любом порядке. В карте отдельно указаны владения Суворова, места его пребывания и более поздние памятные объекты.</p>
+      </div>
+    </details>
+    <details class="all-sources" id="all-sources">
+      <summary>Источники и основа карты</summary>
+      <div class="sources-body">
+        <p>Исторические сведения взяты из архивных публикаций и официальных сайтов. Ссылки на источники есть и в описании каждого объекта. Перед посещением уточните часы работы и условия приёма у учреждения.</p>
+        <div class="source-grid" id="source-grid"></div>
+        <div class="geo-credits"><h3>Основа карты</h3><p>Дороги — <a href="https://www.naturalearthdata.com/downloads/10m-cultural-vectors/roads/" target="_blank" rel="noopener noreferrer">Natural Earth, ne_10m_roads</a> (общественное достояние). Реки — © участники OpenStreetMap: <a href="https://www.openstreetmap.org/relation/2094452" target="_blank" rel="noopener noreferrer">Клязьма</a> и <a href="https://www.openstreetmap.org/relation/2131016" target="_blank" rel="noopener noreferrer">Ворша</a>, лицензия <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">ODbL</a>. Дороги показаны в обзорном масштабе. Суздаль и Ставрово добавлены для ориентации. Административные границы не показаны.</p></div>
+      </div>
+    </details>
+    <noscript><section class="no-script"><h2>Сведения о местах</h2><p>Для выбора объектов включите JavaScript. Основные публикации доступны по ссылкам:</p><ul><li><a href="https://vlarhiv.ru/view/exhibitions/suvorov/index.html">Владимир — архивная выставка</a></li><li><a href="https://undol-kazanskiyhram.ru/?page_id=83">Лакинск — Казанская церковь</a></li><li><a href="https://xn--b1aashsanfhkc3evb.xn--p1ai/about-museum">Кистыш — музей Суворова</a></li><li><a href="https://vlarhiv.ru/view/exhibitions/suvorov/imeniya.html">Менчаково — документы о владении</a></li></ul></section></noscript>
+  </main>
+  <footer class="site-footer page-shell"><span>Учебный проект по истории Владимирского края</span><span>Сведения проверены 27 октября 2026 года</span></footer>
+  <div id="live-status" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+<a data-deed-badge="" href="https://deed.page/?ref=badge" target="_blank" rel="noopener" aria-label="Published with deed.page" style="all:initial;position:fixed;right:10px;bottom:10px;z-index:2147483647;box-sizing:border-box;display:inline-block;padding:4px 8px;border-radius:6px;background:rgba(22,20,15,.78);color:#f6f3ec;font:500 11px/1.3 ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:.01em;text-decoration:none;cursor:pointer;opacity:.9">Published with deed.page</a>
+
+</body></html>
